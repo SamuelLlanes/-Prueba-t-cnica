@@ -1,4 +1,4 @@
-# -Prueba-t-cnica
+# Prueba técnica
 En este proyecto utlice las tecnologias HTML, CSS, JavaScript he intente implementar PHP
 
 Para ejecutar el apartado en el que se encuentran las tarjetas con la barra de busqueda solo es necesario dar click sobre el archivo tarjetas.html.
