@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventario de Productos</title>
+  <link rel="stylesheet" href="css/styleProducto.css">
+</head>
+<body>
+
+  <h1 class="titulo">Inventario de Productos</h1>
+
+  <div class="busqueda-contenedor">
+    <input type="text" id="buscador" placeholder="Buscar producto...">
+  </div>
+
+  <div class="contenedor-tarjetas" id="lista-productos">
+    <div class="tarjeta">
+      <h2 class="nombre">Martillo</h2>
+      <p class="descripcion">Martillo de acero para construcción.</p>
+      <p class="precio">Precio: $9.99</p>
+      <p class="cantidad">Inventario: 20 unidades</p>
+    </div>
+
+    <div class="tarjeta">
+      <h2 class="nombre">Destornillador</h2>
+      <p class="descripcion">Destornillador de estrella, mango ergonómico.</p>
+      <p class="precio">Precio: $4.50</p>
+      <p class="cantidad">Inventario: 35 unidades</p>
+    </div>
+
+    <div class="tarjeta">
+      <h2 class="nombre">Taladro</h2>
+      <p class="descripcion">Taladro eléctrico de 500W.</p>
+      <p class="precio">Precio: $59.90</p>
+      <p class="cantidad">Inventario: 10 unidades</p>
+    </div>
+  </div>
+
+  <script>
+    const buscador = document.getElementById('buscador');
+    const tarjetas = document.querySelectorAll('.tarjeta');
+
+    buscador.addEventListener('input', () => {
+      const valor = buscador.value.toLowerCase();
+      tarjetas.forEach(tarjeta => {
+        const nombre = tarjeta.querySelector('.nombre').textContent.toLowerCase();
+        tarjeta.style.display = nombre.includes(valor) ? 'block' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
+
